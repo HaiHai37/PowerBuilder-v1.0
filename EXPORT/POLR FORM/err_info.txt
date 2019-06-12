@@ -1,0 +1,18 @@
+Date Time Error: 2019/1/22     9:45:29 am
+Error Number: 35
+Message: Error calling external object function open at line 41 in function wf_create_data_imp of object uw_tt_043cstt_imp.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: uw_tt_043cstt_imp
+Object: uw_tt_043cstt_imp
+Event: wf_create_data_imp
+Line: 41
+Application: BUSANHCM2
+Database: busanhcmc352
+Server Name: 
+User: 
+
+        **********************************************
+
+

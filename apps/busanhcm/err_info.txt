@@ -1,0 +1,525 @@
+Date Time Error: 2019/5/27     11:21:50 pm
+Error Number: 2
+Message: Null object reference at line 8 in ke_tvselectionchanged event of object n_explorer.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_explorer
+Object: n_explorer
+Event: ke_tvselectionchanged
+Line: 8
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/30     1:12:56 pm
+Error Number: 2
+Message: Null object reference at line 1 in timer event of object n_timing.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_timing
+Object: n_timing
+Event: timer
+Line: 1
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/30     2:58:37 pm
+Error Number: 30
+Message: Cannot find data type uf_003dbtk_a00054_20181101 at line 44 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 44
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/30     3:00:05 pm
+Error Number: 30
+Message: Cannot find data type uf_003dbtk_a00054_20181101 at line 44 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 44
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/30     3:02:43 pm
+Error Number: 30
+Message: Cannot find data type uf_003dbtk_a00054_20181101 at line 44 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 44
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/30     3:04:28 pm
+Error Number: 30
+Message: Cannot find data type uf_003dbtk_a00054_20181101 at line 44 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 44
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/30     3:08:51 pm
+Error Number: 30
+Message: Cannot find data type uf_003dbtk_a00054_20181101 at line 44 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 44
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:21:44 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:23:49 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:25:30 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:35:02 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:36:00 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:37:15 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:44:23 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     4:53:50 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     5:10:23 pm
+Error Number: 21
+Message: Bad runtime function reference at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     5:11:07 pm
+Error Number: 65
+Message: Dynamic function not found. Possible causes include:
+pass by value/reference mismatch. at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     5:22:38 pm
+Error Number: 65
+Message: Dynamic function not found. Possible causes include:
+pass by value/reference mismatch. at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/5/31     5:22:54 pm
+Error Number: 65
+Message: Dynamic function not found. Possible causes include:
+pass by value/reference mismatch. at line 50 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 50
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/3     2:35:16 pm
+Error Number: 7
+Message: Unresolvable external w_main_polr2_en when linking reference at line 251 in ue_login event of object w_login.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: w_login
+Object: w_login
+Event: ue_login
+Line: 251
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/3     4:45:43 pm
+Error Number: 7
+Message: Unresolvable external w_main_polr2_en when linking reference at line 251 in ue_login event of object w_login.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: w_login
+Object: w_login
+Event: ue_login
+Line: 251
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/3     5:09:16 pm
+Error Number: 30
+Message: Cannot find data type st_divider at line 4 in create event of object u_dwtoolbar_group.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: u_dwtoolbar_group
+Object: u_dwtoolbar_group
+Event: create
+Line: 4
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/4     9:37:48 am
+Error Number: 7
+Message: Unresolvable external w_main_polr2_en when linking reference at line 251 in ue_login event of object w_login.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: w_login
+Object: w_login
+Event: ue_login
+Line: 251
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/6     4:52:44 pm
+Error Number: 2
+Message: Null object reference at line 80 in function of_openmodule of object n_explorer.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_explorer
+Object: n_explorer
+Event: of_openmodule
+Line: 80
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/6     4:54:35 pm
+Error Number: 2
+Message: Null object reference at line 80 in function of_openmodule of object n_explorer.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_explorer
+Object: n_explorer
+Event: of_openmodule
+Line: 80
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/6     5:26:05 pm
+Error Number: 7
+Message: Unresolvable external w_main_polr2_en when linking reference at line 251 in ue_login event of object w_login.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: w_login
+Object: w_login
+Event: ue_login
+Line: 251
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/7     1:13:25 pm
+Error Number: 30
+Message: Cannot find data type uf_077cstt_b00101_20170101 at line 44 in function of_run_prcid of object n_svc_target_data.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_target_data
+Object: n_svc_target_data
+Event: of_run_prcid
+Line: 44
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/7     3:04:42 pm
+Error Number: 6
+Message: Invalid DataWindow row/column specified at line 101 in function of_create of object uf_077cstt_b00101_20170101.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: uf_077cstt_b00101_20170101
+Object: uf_077cstt_b00101_20170101
+Event: of_create
+Line: 101
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+
+Date Time Error: 2019/6/11     9:38:14 am
+Error Number: 32
+Message: Name not found calling external object function close at line 2 in function of_closexls of object n_svc_xlswriter.
+SQL Error: 0
+Transaction Error: 0
+Transaction Text: 
+Place Error: n_svc_xlswriter
+Object: n_svc_xlswriter
+Event: of_closexls
+Line: 2
+Application: BUSANHCM2
+Database: dbex
+Server Name: 
+User: 
+
+        **********************************************
+
+

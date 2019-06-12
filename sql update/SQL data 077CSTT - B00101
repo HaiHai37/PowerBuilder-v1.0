@@ -1,0 +1,149 @@
+select   	a.brcd				as brcd																																																																
+			,case when a.ccycd in ('USD', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD', 'RUB', 'HKD', 'SGD', 'THB', 'CNY', 'KRW') then a.ccycd  else 'KHAC'  end		      
+								as currency                                                       																									                            
+			,ISNULL( sum(case  when a.tg 		<> 'B' 		 then 0											                                                                                    
+							when a.ccycd 	=  'VND' 		then 0 		                                                                                                              
+							  when a.ccycd  in ('USD', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD'					                                                                      
+												, 'RUB', 'HKD', 'SGD', 'THB', 'CNY', 'KRW') then 0    			                                                                            
+									else case d.dmflg when 'D' then a.amt/d.bsrt else a.amt*d.bsrt   end                                                                          
+							end) / 23205.000000																			                                                                                          
+				+ sum (case when a.tg 		<> 'B' 		 then 0											                                                                                        
+							when a.ccycd not in  ('USD', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD'					                                                                    
+												, 'RUB', 'HKD', 'SGD', 'THB', 'CNY', 'KRW')		then 0  else isnull(a.amt, 0) 	end)                                                      
+					                                                      												                                                                        
+					,0) 			as		buyamt                  									                                                                                            
+			,ISNULL( sum(case  when a.tg 		<> 'S' 		 then 0											                                                                                    
+							when a.ccycd 	=  'VND' 		then 0 		                                                                                                              
+							  when a.ccycd   in ('USD', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD'					                                                                    
+												, 'RUB', 'HKD', 'SGD', 'THB', 'CNY', 'KRW') then 0    			                                                                            
+									else case d.dmflg when 'D' then a.amt/d.bsrt else a.amt*d.bsrt   end                                                                          
+							end)  / 23205.000000																			                                                                                                        
+				+ sum (case 		when a.tg 		<> 'S' 		 then 0													                                                                                
+								when a.ccycd not in  ('USD', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD'					                                                                  
+												, 'RUB', 'HKD', 'SGD', 'THB', 'CNY', 'KRW')		then 0  else isnull(a.amt, 0) 	end)                                                      
+					                                                      												                                                                        
+					,0) 		as		sellamt                 									                                                                                              
+			                                                                                                        																						      
+from                                                                                                         																							    
+		(                                                                                                         																							    
+		SELECT  a.brcd                                                                                                                                              
+				, case when TRXTP = 'B' then 'B' else 'S' end  as  tg                                                                                                   
+				, a.custno                                                                                                                                              
+       			,'SPT'															 as SPTFWD                                                                                                    
+      			, case  when TRXTP = 'B' then  '1. Bought from customer'else '2.Sold to customer' end  as customer                                                  
+				,a.ccycd			as ccycd                                                                                                                                  
+      			, sum( tramt)												as		amt                                                                                                       
+		FROM                                                                                                                                                        
+				(                                                                                                                                                       
+				select a.brcd                                                                                                                                           
+						, a.custno                                                                                                                                          
+						,a.id                                                                                                                                               
+						,a.ccycd                                                                                                                                            
+						,'S'		as 	TRXTP			                                                                                                                              
+						,sum( case  when a.acctcd in ('1198000100', '2298000100') 				then a.tramt                                                                        
+								--	 when a.acctcd in ('1198000100')	and a.drcrtg = 'DR'			then a.tramt                                                                          
+								--	 when a.acctcd in ('2298000100')	and a.drcrtg = 'DR'			then a.tramt                                                                          
+									when a.acctcd in ('5131001200')	and a.drcrtg = 'DR'			then a.tramt                                                                          
+									when a.acctcd in ('5131001200')	and a.drcrtg = 'CR'			then - a.tramt                                                                        
+									when a.acctcd in ('6231501200')	and a.drcrtg = 'DR'			then a.tramt                                                                        
+									when a.acctcd in ('6231501200')	and a.drcrtg = 'CR'			then - a.tramt                                                                         
+									                                                                                                                                              
+								end ) as tramt                                                                                                                                  
+				  from tgl_jrnldd a				                                                                                                                              
+				  where a.baymd = '20181228' 					                                                                                                                  
+					 and a.ccycd <> 'VND'                                                                                                                                 
+					 and a.sts = '10' 						                                                                                                                        
+  					 and a.acctcd  in ('1198000100', '2298000100', '5131001200', '6231501200')	                                                                        
+					 and a.id in ( select distinct id                                                                                                                     
+												from tgl_jrnldd a                                                                                                                       
+												where a.baymd = '20181228' 													                                                                                    
+													 and a.ccycd <> 'VND'                                                                                                                 
+													 and a.sts = '10'											 											                                                                          
+													 and a.acctcd in ('1198000100', '2298000100')                                                                                         
+													 and a.drcrtg = 'DR'                                                                                                                  
+																							                                                                                                                  
+									 			)					 	                                                                                                                            
+					 and a.id not in ( select distinct id                                                                                                                 
+												from tgl_jrnldd a                                                                                                                       
+													left join tcs_custmst b on a.custno = b.custno                                                                                        
+												where a.baymd = '20181228' 												                                                                                    
+													 and a.ccycd <> 'VND'                                                                                                                 
+													 and a.sts = '10'											 											                                                                          
+													 and a.acctcd in ('1198000100', '2298000100')                                                                                         
+													 and a.drcrtg = 'DR'                                                                                                                  
+													 and ( b.custtpcd = '03')                                                                                                             
+																							                                                                                                                  
+									 			)                                                                                                                                       
+					group by id                                                                                                                                           
+							, ccycd                                                                                                                                           
+							, a.brcd                                                                                                                                          
+							, a.custno                                                                                                                                        
+                                                                                                                                                               
+                                                                                                                                                               
+					union all                                                                                                                                             
+					select  a.brcd                                                                                                                                        
+							, a.custno                                                                                                                                        
+							,a.id                                                                                                                                             
+							,a.ccycd                                                                                                                                          
+							,'B'		as 	TRXTP			                                                                                                                            
+							,sum( case  when a.acctcd in ('1198000100', '2298000100') then a.tramt                                                                             
+									--	when a.acctcd in ('1198000100')	and a.drcrtg = 'CR'			then a.tramt                                                                        
+									--	 when a.acctcd in ('2298000100')	and a.drcrtg = 'CR'			then a.tramt                                                                        
+										when a.acctcd in ('5131001200')	and a.drcrtg = 'CR'			then a.tramt                                                                        
+										when a.acctcd in ('5131001200')	and a.drcrtg = 'DR'			then - a.tramt                                                                      
+										when a.acctcd in ('6231501200')	and a.drcrtg = 'CR'			then  a.tramt                                                                      
+										when a.acctcd in ('6231501200')	and a.drcrtg = 'DR'			then - a.tramt                                                                       
+										                                                                                                                                            
+									end ) as tramt                                                                                                                                
+				  from tgl_jrnldd a				                                                                                                                              
+				  where a.baymd = '20181228' 					                                                                                                                  
+					 and a.ccycd <> 'VND'                                                                                                                                 
+					 and a.sts = '10' 						                                                                                                                        
+  					 and a.acctcd  in ('1198000100', '2298000100', '5131001200', '6231501200')	                                                                        
+					 and a.id in ( select distinct id                                                                                                                     
+												from tgl_jrnldd a                                                                                                                       
+												where a.baymd = '20181228' 												                                                                                    
+													and a.ccycd <> 'VND'                                                                                                                  
+													and a.sts = '10'											 											                                                                          
+													and a.acctcd in ('1198000100', '2298000100')                                                                                          
+													and a.drcrtg = 'CR'                                                                                                                   
+																							                                                                                                                  
+									 			)			 	                                                                                                                                
+					 and a.id not in ( select distinct id                                                                                                                 
+												from tgl_jrnldd a                                                                                                                       
+													left join tcs_custmst b on a.custno = b.custno                                                                                        
+												where a.baymd = '20181228' 												                                                                                    
+													 and a.ccycd <> 'VND'                                                                                                                 
+													 and a.sts = '10'											 											                                                                          
+													 and a.acctcd in ('1198000100', '2298000100')                                                                                         
+													 and a.drcrtg = 'CR'                                                                                                                  
+													 and ( b.custtpcd = '03')                                                                                                             
+																							                                                                                                                  
+									 			)                                                                                                                                       
+					group by id                                                                                                                                           
+							, ccycd                                                                                                                                           
+							, a.brcd                                                                                                                                          
+							, a.custno                                                                                                                                        
+							                                                                                                                                                  
+				) a                                                                                                                                                     
+		WHERE tramt <> 0                                                                                                                                            
+		GROUP BY case when TRXTP = 'B' then 'B' else 'S' end  					                                                                                            
+      				 , case  when TRXTP = 'B' then  '1. Bought from customer'else '2.Sold to customer' end                                                            
+				,a.ccycd                                                                                                                                                
+				,a.brcd                                                                                                                                                 
+				, a.custno                                                                                                                                              
+                                                                                                                                                               
+		) A                                                                                                      																							      
+--LEFT JOIN tcs_custmst b on a.custno = b.custno   and a.brcd  = b.brcd                                                      													        
+LEFT JOIN  TCS_BANKCD c on a.custno = c.custno and a.brcd = c.brcd																											                                        
+LEFT JOIN                                                                                                    																			            
+	(select fmccycd ccycd,BSRT, 'M' as DMFLG                                                            																                          
+	 from tcs_exchngrt_v                                                                                																		                      
+	where ccycd = 'VND'                                                                                 																		                      
+	  and ntcdt = '20181228' 																                                                                                                      
+	) d on a.ccycd = d.ccycd																				                                                                                              
+where amt <> 0                                                                                             																						        
+	and isnull(c.CIYN,'0') <>  '1'                                                    																					                                  
+group by  a.brcd																												 															                                                          
+		,case when a.ccycd in ('USD', 'EUR', 'JPY', 'GBP', 'CHF', 'AUD', 'CAD', 'RUB', 'HKD', 'SGD', 'THB', 'CNY', 'KRW') then a.ccycd  else 'KHAC'  end            
+			                                                 
